@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+    height:100vh;
+    background: linear-gradient(120deg, #3ca7ee, #9b408f);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    cursor: pointer;
+}
+.wrapper{
+    width:400px;
+    border-radius:5px;
+    background-color:white;
+    overflow: hidden;
+}
+
+.header-todolist{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom:2px solid black;
+    padding:0 20px;
+    height:50px;
+}
+
+.header-todolist input{
+    width:100%;
+    border:none;
+    outline:none;
+    height:100%;
+    font-size:16px;
+    padding-right:20px;
+}
+
+.header-todolist button{
+    padding:6px 12px;
+    background-color:#9b408f;
+    color:white;
+    font-size:14px;
+    border:none;
+    outline:none;
+    border-radius:4px;
+    transition:0.3s;
+}
+
+.header-todolist button:hover{
+    background-color:#573b53
+}
+.content-todolist li{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:10px 20px;
+    border-bottom:2px solid #adadad;
+}
+.content-todolist li p{
+    cursor: pointer;
+    width:100%;
+}
+
+.content-todolist li p.active{
+    color:#ccc;
+    text-decoration: line-through;
+}
+.content-todolist li i{
+    visibility: hidden;
+    pointer-events: none;
+    cursor:pointer;
+}
+.content-todolist li:hover i{
+    visibility: visible;
+    pointer-events: auto;
+}
