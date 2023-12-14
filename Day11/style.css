@@ -144,16 +144,16 @@ body{
 
 @keyframes toastHide {
     0%{
-        transform: translateX(0%);
+        transform: translateX(-5%);
     }
     25%{
         transform: translateX(10%);
     }
     50%{
-        transform: translateX(0%);
+        transform: translateX(-10%);
     }
     75%{
-        transform: translateX(-10px);
+        transform: translateX(200%);
     }
     100%{
         transform: translateX(200%);
