@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+:root{
+    --success-color:rgb(0, 128, 0);
+    --warning-color:rgb(255, 165, 0);
+    --error-color:rgb(255, 0, 0);
+
+    --success-light:rgba(0, 128, 0,0.4);
+    --warning-light:rgba(255, 165, 0,0.4);
+    --error-light:rgba(255, 0, 0,0.4);
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+    height:100vh;
+    background-color:#ecf0f1;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    color: white;
+}
+
+
+.toasts{
+    display:flex;
+}
+
+.toast{
+    padding: 12px 16px;
+    font-size: 18px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 0 10px;
+    color: white;
+}
+
+.toast.success{
+    background-color:var(--success-color);
+}
+.toast.error{
+    background-color:var(--error-color);
+}
+.toast.warning{
+    background-color:var(--warning-color);
+}
+
+.toastMessages{
+    position:fixed;
+    top:10px;
+    right:10px;
+}
+
+.toastItem{
+    padding: 20px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    border-left: 6px solid;
+    position: relative;
+    animation:toastShow 2s ease forwards;
+}
+
+.toastItem p{
+    margin-left:20px;
+}
+
+.toastItem::after{
+    content:'';
+    display:block;
+    position:absolute;
+    width:100%;
+    bottom:0;
+    left:0;
+    height:4px;
+    animation:countdown 4s  0.5s linear forwards;
+}
+
+
+.toastItem.success::after{
+    background-color:var(--success-color);
+}
+
+.toastItem.warning::after{
+    background-color:var(--warning-color);
+}
+
+.toastItem.error::after{
+    background-color:var(--error-color);
+}
+
+.toastItem.success{
+    background-color:var(--success-light);
+    border-color:var(--success-color)
+}
+
+.toastItem.warning{
+    background-color:var(--warning-light);
+    border-color:var(--warning-color)
+}
+
+.toastItem.error{
+    background-color:var(--error-light);
+    border-color:var(--error-color)
+}
+
+
+/* animation */
+
+@keyframes countdown {
+    from{
+        width:100%
+    }
+    to{
+        width:0;
+    }
+}
+
+@keyframes toastShow {
+    0%{
+        transform: translateX(100%);
+    }
+    25%{
+        transform: translateX(-10%);
+
+    }
+    50%{
+        transform: translateX(0%);
+    }
+    75%{
+        transform: translateX(-5%);
+    }
+    100%{
+        transform: translateX(-5%);
+    }
+}
+
+@keyframes toastHide {
+    0%{
+        transform: translateX(0%);
+    }
+    25%{
+        transform: translateX(10%);
+    }
+    50%{
+        transform: translateX(0%);
+    }
+    75%{
+        transform: translateX(-10px);
+    }
+    100%{
+        transform: translateX(200%);
+    }
+}
