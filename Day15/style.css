@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    height:100vh;
+    background-color:#dadada;
+    font-family:'Poppins',sans-serif;
+}
+
+.container{
+    width:400px;
+    background-color:white;
+    margin:100px auto;
+    border-radius:20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.container h1{
+    font-size:20px;
+    text-align: center;
+    margin:20px;
+    font-weight: 600;
+}
+
+.container .products{
+    margin-top:40px;
+    overflow-y:auto;
+    max-height: 400px;
+}
+
+.container .products h2{
+    text-align: center;
+    font-size:16px;
+    margin:10px;
+}
+.searchInput{
+    width:90%;
+    height:34px;
+    margin:0 auto;
+    border:1px solid black;
+    border-radius:5px;
+    display:flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.searchInput i{
+    padding:10px;
+    font-size:16px;
+    font-weight: bold;
+}
+
+.searchInput input{
+    width:100%;
+    height:100%;
+    border:none;
+    outline:none;
+    font-size:16px;
+}
+
+.product{
+    height:100px;
+    padding:8px 20px;
+    display:flex;
+    align-items: center;
+    margin-bottom:10px;
+}
+.product:hover{
+    background-color:#dadada;
+    cursor: pointer;
+}
+.product img{
+    width:50px;
+    object-fit: cover;
+    object-position: center;
+    margin-right:20px;
+}
+
+.product .info{
+    display:flex;
+    flex-direction: column;
+    height:100%;
+    text-align: center;
+}
+
+.name{
+    margin-top:10px;
+    font-weight: 600;
+    font-size:14px;
+    text-align: left;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.price{
+    margin-top:10px;
+}
+
+.hide{
+    display:none;
+}
