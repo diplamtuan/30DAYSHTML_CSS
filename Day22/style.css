@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    display:flex;
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.containerWrapper{
+    width:80%;
+    background-color:#e2f3e2;
+    border-radius:20px;
+    padding:40px 100px;
+}
+
+img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.control{
+    display:flex;
+    justify-content: center;
+    margin-bottom:60px;
+}
+
+.control button{
+    width:131px;
+    height:37px;
+    color:white;
+    font-weight: bold;
+    border:none;
+    outline:none;
+    border-radius:20px;
+    border:1px solid #0f9d58;
+    background-color:white;
+    color:#0f9d58;
+    margin:0 10px;
+    cursor: pointer;
+    transition:0.3s all;
+}
+
+button:hover{
+    background-color:#0f9d58;
+    color:white;
+}
+
+button.active{
+    background-color:#0f9d58;
+    color:white;
+}
+
+
+.listImages{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap:20px;
+}
+
+.listImages > div{
+    height:220px;
+    border-radius:20px;
+    overflow: hidden;
+}
+
+.listImages > div img{
+    transition:all 0.5s;
+    transform: scale(1) rotate(0);
+}
+.listImages > div img:hover{
+    transform: scale(2) rotate(90deg);
+    cursor: pointer;
+}
